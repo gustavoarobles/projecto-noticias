@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-item lines="none" > <ion-back-button defaultHref="home" icon="arrow-back-circle" ></ion-back-button>
+    <ion-title class="ion-text-center">Noticias</ion-title>
+  </ion-item>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h2 class="ion-text-center">Ultimas Noticias</h2>
+<ion-card *ngFor="let item of data.articles">
+  <ion-img src="{{item.urlToImage}}"></ion-img>
+  <ion-card-header>{{item.title}}</ion-card-header>
+ <ion-card-content>{{item.description}}
+  <ion-button shape="round" expand="full" fill="outline" href="{{item.url}}" class="ion-button-center">Leer Nota Completa</ion-button>
+ </ion-card-content>
+</ion-card>
+</ion-content>
